@@ -1,0 +1,104 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>QR code generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+   <div><h1>QR Code Generator</h1>
+      <h2>Enter your content and thus generate your QR</h2>
+      <form action="" id="qr-form">
+         <input type="text" name="qr-code-content" id="qr-content" autocomplete="off" placeholder="Enter your content here">
+         <input type="submit" id="qr" value="Generate QR code">
+      </form><br><br>
+      <div id="qr-code"></div>
+   </body></div>
+</body>
+<script src="script.js"></script>
+</html>
+<!--style.css-->
+body{
+    font-family: sans-serif;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M211.11 80.97L240.69 80.97L240.69 110.55L211.11 110.55z' stroke='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M91.82 297.52L95.21 297.52L95.21 339.04L91.82 339.04z' stroke='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M1218.23 343.54 a32.93 32.93 0 1 0 65.86 0 a32.93 32.93 0 1 0 -65.86 0z' fill='rgba(173%2c 68%2c 67%2c 1)'%3e%3c/path%3e%3cpath d='M572.15 550.84L596.86 550.84L596.86 575.55L572.15 575.55z' fill='rgba(68%2c 123%2c 71%2c 1)'%3e%3c/path%3e%3cpath d='M1324.42 81.51L1366.1 81.51L1366.1 127.09L1324.42 127.09z' stroke='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M1336.24 356.95 a18.6 18.6 0 1 0 37.2 0 a18.6 18.6 0 1 0 -37.2 0z' fill='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M1400.74 50.73L1401.93 50.73L1401.93 91.65L1400.74 91.65z' stroke='rgba(173%2c 68%2c 67%2c 1)'%3e%3c/path%3e%3cpath d='M1178.05 210.3L1227.42 210.3L1227.42 259.67L1178.05 259.67z' fill='rgba(173%2c 68%2c 67%2c 1)'%3e%3c/path%3e%3cpath d='M930.18 209.09a6.35 6.35 0 1 0 11.44-5.53z' fill='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M349.66 21.94L370.44 21.94L370.44 71.88L349.66 71.88z' stroke='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M1258.26 116.51L1286.42 116.51L1286.42 144.67L1258.26 144.67z' stroke='rgba(173%2c 68%2c 67%2c 1)'%3e%3c/path%3e%3cpath d='M285.95 307.71 a3.96 3.96 0 1 0 7.92 0 a3.96 3.96 0 1 0 -7.92 0z' stroke='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M1298.25-18.77a48.25 48.25 0 1 0 33.2 90.61z' fill='rgba(173%2c 68%2c 67%2c 1)'%3e%3c/path%3e%3cpath d='M19.11 555.67L63.59 555.67L63.59 572.1L19.11 572.1z' stroke='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M89.24 83.76 a53.06 53.06 0 1 0 106.12 0 a53.06 53.06 0 1 0 -106.12 0z' fill='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M438.29 198.81a44.54 44.54 0 1 0 29.61 84.02z' stroke='rgba(68%2c 123%2c 71%2c 1)'%3e%3c/path%3e%3cpath d='M353.72 292.9L357.98 292.9L357.98 297.16L353.72 297.16z' fill='rgba(68%2c 123%2c 71%2c 1)'%3e%3c/path%3e%3cpath d='M901.57 351.67a45.98 45.98 0 1 0-18.51-90.08z' stroke='rgba(173%2c 68%2c 67%2c 1)'%3e%3c/path%3e%3cpath d='M194.06 307.99a20.36 20.36 0 1 0-39.39 10.3z' fill='rgba(173%2c 68%2c 67%2c 1)'%3e%3c/path%3e%3cpath d='M1270.39 344.64a11.78 11.78 0 1 0 17.86-15.36z' stroke='rgba(173%2c 68%2c 67%2c 1)'%3e%3c/path%3e%3cpath d='M916.26 178.01 a24.65 24.65 0 1 0 49.3 0 a24.65 24.65 0 1 0 -49.3 0z' fill='rgba(68%2c 123%2c 71%2c 1)'%3e%3c/path%3e%3cpath d='M399.61 359.04 a8.65 8.65 0 1 0 17.3 0 a8.65 8.65 0 1 0 -17.3 0z' stroke='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M442.26 19.11a25.8 25.8 0 1 0-11.59 50.29z' fill='rgba(68%2c 123%2c 71%2c 1)'%3e%3c/path%3e%3cpath d='M1379.52 442.47L1395.65 442.47L1395.65 458.6L1379.52 458.6z' stroke='rgba(173%2c 68%2c 67%2c 1)'%3e%3c/path%3e%3cpath d='M1086.24 80.84L1091.38 80.84L1091.38 130.48L1086.24 130.48z' stroke='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M75.35 178.72L76.49 178.72L76.49 214.57L75.35 214.57z' stroke='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M792.89 195.42L822.54 195.42L822.54 245.71L792.89 245.71z' stroke='rgba(173%2c 68%2c 67%2c 1)'%3e%3c/path%3e%3cpath d='M450.79 306.75L490.9 306.75L490.9 346.86L450.79 346.86z' fill='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M1194.86 221.51a30.46 30.46 0 1 0 60.13 9.78z' stroke='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3cpath d='M408.19 181.21 a39.41 39.41 0 1 0 78.82 0 a39.41 39.41 0 1 0 -78.82 0z' stroke='rgba(68%2c 123%2c 71%2c 1)'%3e%3c/path%3e%3cpath d='M122.2 183.91L153.19 183.91L153.19 186.62L122.2 186.62z' stroke='rgba(68%2c 123%2c 71%2c 1)'%3e%3c/path%3e%3cpath d='M703.42 374.74L714.29 374.74L714.29 385.61L703.42 385.61z' stroke='rgba(68%2c 123%2c 71%2c 1)'%3e%3c/path%3e%3cpath d='M99.99 457.19L110.61 457.19L110.61 479.07L99.99 479.07z' stroke='rgba(155%2c 141%2c 63%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");   
+}
+div{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{
+    color: rgb(221, 216, 227);
+    font-size: 50px;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,.25);
+}
+h2{
+    color: rgb(235, 106, 192);
+    font-size: 30px;
+    text-shadow: 1px 2px 3px rgba(0,0,0,.25);
+    margin-bottom: 40px;
+}
+#qr-content{
+    height: 40px;
+    width: 400px;
+}
+#qr{
+    height: 42px;
+    width: 200px;
+}
+@media screen and (max-width:576px) {
+    h1{
+        color: rgb(0, 255, 191);
+        font-size: 30px;
+        margin-top: 125px;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,.25);
+    }
+    h2{
+        color: rgb(243, 239, 241);
+        font-size: 16px;
+        text-shadow: 1px 2px 3px rgba(0,0,0,.25);
+        margin-bottom: 40px;
+    }
+    #qr-content{
+        height: 30px;
+        width: 220px;
+    }
+    #qr{
+        height: 32px;
+        width: 125px;
+    }
+}
+
+<!--script.js-->
+let qrContentInput = document.getElementById("qr-content");
+let qrForm = document.getElementById("qr-form");
+let qrCode;
+
+function generateQrCode(qrContent){
+    return new QRCode("qr-code",{
+        text : qrContent,
+        width : 256,
+        height : 256,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H,
+    });
+}
+
+qrForm.addEventListener('submit',function(event){
+    event.preventDefault();
+    let qrContent = qrContentInput.value;
+    if(qrCode == null){
+        qr = generateQrCode(qrContent);
+    }
+    else{
+        qrCode.makeCode(qrContent)
+    }
+})
